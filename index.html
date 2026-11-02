@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Laboratory of Applied Microbiology (PN-39) at IBB PAS, Warsaw. Research on bacteriocins, phages, microbial genomics, and probiotic candidates.">
+  <meta property="og:title" content="Laboratory of Applied Microbiology | IBB PAS">
+  <meta property="og:description" content="Molecular microbiology, bacteriocins, phages and translational research.">
+  <title>Laboratory of Applied Microbiology | IBB PAS</title>
+  <style>
+    :root { --navy:#0d2848; --blue:#225987; --teal:#087e80; --mint:#e9f8f4; --ink:#1d2d3b; --muted:#5e7181; --line:#dce7ec; --pale:#f3f7f9; }
+    * {box-sizing:border-box}
+    html { scroll-behavior:smooth; }
+    body { margin:0; font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif; color:var(--ink); background:#fff; }
+    a {color:#075c76; text-underline-offset:3px}
+    a:hover {color:#0a7c8e}
+    .skip {position:absolute;left:-9999px}
+    .skip:focus {left:12px;top:12px;background:#fff;padding:6px;z-index:1000}
+    .container {width:min(1100px,calc(100% - 48px)); margin:auto;}
+    header {background:#fff; border-bottom:1px solid var(--line); position:sticky;top:0;z-index:10;}
+    .header-inner {min-height:77px;display:flex;gap:24px;align-items:center;justify-content:space-between;}
+    .brand {display:flex;align-items:center;gap:13px;text-decoration:none;color:var(--navy);font-size:14px;line-height:1.3;font-weight:750;letter-spacing:-.01em}
+    .brand img {width:57px;height:57px;object-fit:contain}
+    .brand small {display:block;color:var(--muted);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-top:3px}
+    nav {display:flex;align-items:center;flex-wrap:wrap;gap:20px}
+    nav a {text-decoration:none;color:#3b5365;font-size:13px;font-weight:700}
+    nav a:hover {color:var(--teal)}
+    .hero {background:linear-gradient(120deg, #eef6fa 0%,#fff 50%, #e8f6f3 100%);position:relative;overflow:hidden;}
+    .hero:after {content:"";position:absolute;border:1px solid #c8e7e6;border-radius:50%;width:560px;height:560px;right:-270px;top:-300px;pointer-events:none}
+    .hero-inner {padding:83px 0 78px;display:grid;grid-template-columns:1.6fr .8fr;gap:50px;align-items:center}
+    .eyebrow {text-transform:uppercase;letter-spacing:.16em;color:#147b7a;font-size:12px;font-weight:800; margin:0 0 18px}
+    h1 {font-size:clamp(35px,4.4vw,59px);line-height:1.09;letter-spacing:-.045em;color:var(--navy);margin:0 0 23px;font-weight:770;}
+    h1 em {font-style:normal;color:#067f84}
+    .lead {font-size:18px;line-height:1.68;color:#415e6f;max-width:650px;margin:0 0 26px}
+    .hero-ctas {display:flex;gap:12px;flex-wrap:wrap}
+    .btn {display:inline-block;border-radius:7px;text-decoration:none;font-size:14px;font-weight:750;padding:11px 19px;transition:background .15s}
+    .btn-primary {background:var(--navy);color:#fff}
+    .btn-primary:hover {background:#125477;color:#fff}
+    .btn-secondary {border:1px solid #aecbcf;color:#0d5566;background:rgba(255,255,255,.8)}
+    .hero-mark {max-width:290px;width:90%;justify-self:center;filter:drop-shadow(0 17px 28px rgba(0,60,80,.09))}
+    .hero-mark img {display:block;width:100%;height:auto}
+    section {padding:73px 0;scroll-margin-top:90px}
+    .section-kicker {font-size:12px;letter-spacing:.15em;color:#0c7a7b;text-transform:uppercase;font-weight:750;margin:0 0 8px}
+    h2 {font-size:clamp(27px,3vw,38px);line-height:1.22;margin:0 0 15px;color:var(--navy);letter-spacing:-.025em}
+    .section-intro {max-width:760px;color:var(--muted);margin:0 0 29px}
+    .cards {display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+    .card {padding:26px 24px 25px;border:1px solid var(--line);border-radius:13px;background:#fff;box-shadow:0 3px 14px rgba(23,68,92,.025)}
+    .card .number {font-size:12px;letter-spacing:.1em;font-weight:800;color:#08958f;display:block;margin-bottom:14px}
+    .card h3 {font-size:18px;line-height:1.32;margin:0 0 11px;color:#163b59}
+    .card p {font-size:14px;line-height:1.66;color:#536a78;margin:0}
+    .overview {background:var(--pale)}
+    .figure-frame {padding:12px;background:#fff;border-radius:15px;border:1px solid var(--line);box-shadow:0 12px 30px rgba(21,73,95,.045)}
+    .figure-frame img {width:100%;height:auto;display:block;border-radius:8px}
+    figcaption {font-size:13px; color:#647783; margin-top:11px}
+    .team {display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:27px}
+    .person {display:flex;align-items:flex-start;gap:18px;border:1px solid var(--line);border-radius:12px;padding:25px;background:#fff}
+    .person .avatar {background:#e1f0f4;color:#176a86;border-radius:50%;height:55px;width:55px;flex:none;display:grid;place-items:center;font-weight:800;font-size:20px}
+    .person h3 {font-size:17px;margin:0;color:#163b59;line-height:1.4}
+    .role {font-size:13px;color:#0b8280;font-weight:700;margin:5px 0 8px}
+    .person p:last-child {font-size:13px;line-height:1.6;color:#5f7280;margin:0}
+    .pubs {background:var(--pale)}
+    .publist {list-style:none;padding:0;margin:28px 0 0}
+    .publist li {display:flex;gap:21px;padding:17px 0;border-top:1px solid #d7e3e7}
+    .publist li:last-child {border-bottom:1px solid #d7e3e7}
+    .pub-no {font-size:13px;line-height:27px;color:#138b8c;font-weight:800;letter-spacing:.04em;min-width:28px}
+    .pub-main p {font-size:14px;line-height:1.65;margin:0 0 4px}
+    .pub-main a {font-size:13px;word-break:break-word;text-decoration:none;font-weight:700}
+    .methods-grid {display:grid;grid-template-columns:1.5fr 1fr;gap:60px;align-items:start}
+    .methods-note {border-left:4px solid #14a3a1;padding:3px 0 3px 22px;color:#526a78;font-size:15px}
+    .methods-note strong {color:var(--navy)}
+    .methods-grid p {color:#536a78}
+    .contact {background:linear-gradient(110deg,#103352,#115869);color:#fff}
+    .contact h2,.contact .section-kicker {color:#fff}
+    .contact p {color:#cfe2e8;max-width:760px}
+    .contact a {color:#fff;font-weight:700}
+    .contact-links {display:flex;gap:26px;flex-wrap:wrap;margin:25px 0 3px}
+    footer {background:#092238;color:#c0d2dc;padding:25px 0;font-size:12px}
+    .footer-inner {display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    footer a {color:#e0f1f5}
+    @media(max-width:900px) {.cards {grid-template-columns:repeat(2,1fr)}.hero-inner {gap:15px} nav {gap:12px}}
+    @media(max-width:660px) {.container {width:min(100% - 30px,1100px)}.header-inner {padding:9px 0;align-items:flex-start;flex-direction:column;gap:9px}nav {gap:16px 12px} .hero-inner {grid-template-columns:1fr;padding:49px 0 47px}.hero-mark {max-width:180px;justify-self:start}section {padding:54px 0} .cards,.team,.methods-grid {grid-template-columns:1fr} .publist li {gap:12px}.person {padding:19px}}
+    @media(prefers-reduced-motion:reduce) { html {scroll-behavior:auto} }
+  </style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+  <div class="container header-inner">
+    <a class="brand" href="#top" aria-label="Laboratory of Applied Microbiology, home"><img src="lam-mark.png" alt="" width="57" height="57"><span>Laboratory of<br>Applied Microbiology<small>IBB PAS · Warsaw</small></span></a>
+    <nav aria-label="Main navigation"><a href="#research">Research</a><a href="#overview">Overview</a><a href="#team">Team</a><a href="#publications">Publications</a><a href="#methods">Expertise</a><a href="#contact">Contact</a></nav>
+  </div>
+</header>
+<main id="main">
+  <div class="hero" id="top"><div class="container hero-inner"><div>
+    <p class="eyebrow">Applied microbiology · Molecular mechanisms · Biotechnology</p>
+    <h1>From microbial<br><em>mechanisms</em> to<br>meaningful applications.</h1>
+    <p class="lead">We investigate bacteriocins and antimicrobial resistance, lactococcal bacteriophages, and the functional potential of microorganisms. Our work connects molecular genetics and protein biochemistry with phenotypic profiling, multi-omics and applied research.</p>
+    <div class="hero-ctas"><a class="btn btn-primary" href="#research">Explore our research</a><a class="btn btn-secondary" href="#contact">Get in touch</a></div>
+  </div><div class="hero-mark"><img src="lam-mark.png" alt="Laboratory of Applied Microbiology LAM symbol" width="480" height="410"></div></div></div>
+  <section id="research"><div class="container">
+    <p class="section-kicker">Scientific directions</p><h2>What we investigate</h2>
+    <p class="section-intro">Our laboratory brings together complementary programmes in molecular and applied microbiology, spanning fundamental mechanisms and experimental approaches relevant to health, food and biotechnology.</p>
+    <div class="cards">
+      <article class="card"><span class="number">01 / ANTIMICROBIALS</span><h3>Bacteriocins & receptor recognition</h3><p>Structural and functional studies of class II bacteriocins, their interactions with the Man-PTS receptor, and molecular determinants of antimicrobial specificity.</p></article>
+      <article class="card"><span class="number">02 / RESISTANCE</span><h3>Cell-envelope adaptation</h3><p>Genetic and physiological mechanisms of resistance to bacteriocins and membrane-active antibiotics, including stress-response and regulatory pathways.</p></article>
+      <article class="card"><span class="number">03 / PHAGES</span><h3>Dairy bacteriophages</h3><p>Lactococcal phage biology, DNA replication proteins and helicases, and phage–host interactions relevant to dairy starter cultures.</p></article>
+      <article class="card"><span class="number">04 / HOST INTERACTION</span><h3>Probiotics & epithelial models</h3><p>Functional profiling of bacterial candidates, adhesion to biotic and abiotic surfaces, and epithelial barrier measurements including TEER in selected in-vitro models.</p></article>
+      <article class="card"><span class="number">05 / GENOMICS</span><h3>Genomics & metabolomics</h3><p>Strain-level genetic characterization, genomic determinants of function, comparative metabolic pathways and integration with targeted extracellular metabolomics.</p></article>
+      <article class="card"><span class="number">06 / APPLICATIONS</span><h3>Microbial biotechnology</h3><p>Phenotypic profiling and collaborative R&amp;D addressing fermentation, functional food, bioactive metabolites and the translation of research into applications.</p></article>
+    </div>
+  </div></section>
+  <section class="overview" id="overview"><div class="container">
+    <p class="section-kicker">At a glance</p><h2>An integrated research profile</h2>
+    <p class="section-intro">Seven connected themes illustrate the breadth of experimental and applied research carried out by the laboratory.</p>
+    <figure style="margin:0"><div class="figure-frame"><img src="research-overview.webp" alt="Diagram of seven research areas: bacteriocins, resistance, bacteriophages, functional genomics, phenotypic profiling, host interactions and applications" width="1448" height="1086" loading="lazy"></div><figcaption>Research overview • Laboratory of Applied Microbiology, IBB PAS.</figcaption></figure>
+  </div></section>
+  <section id="team"><div class="container"><p class="section-kicker">People</p><h2>Our team</h2>
+  <p class="section-intro">Two researchers with complementary expertise in the mechanisms and applications of microbial systems.</p>
+  <div class="team">
+    <article class="person"><div class="avatar" aria-hidden="true">TA</div><div><h3>Tamara Aleksandrzak-Piekarczyk</h3><p class="role">Head of laboratory · Professor of the Institute</p><p>Bacteriocins, microbial genetics, functional genomics, probiotic candidates and translational microbiology.<br><a href="https://orcid.org/0000-0002-4725-760X" target="_blank" rel="noopener noreferrer">ORCID ↗</a></p></div></article>
+    <article class="person"><div class="avatar" aria-hidden="true">AS</div><div><h3>Agnieszka K. Szczepankowska</h3><p class="role">Researcher · PhD, DSc</p><p>Lactococcal bacteriophages, helicases, molecular biology of phage replication and dairy starter culture biology.<br><a href="https://orcid.org/0000-0002-8733-3283" target="_blank" rel="noopener noreferrer">ORCID ↗</a></p></div></article>
+  </div></div></section>
+  <section id="publications" class="pubs"><div class="container"><p class="section-kicker">Selected research</p><h2>Highlighted publications</h2><p class="section-intro">A small selection of recent research spanning bacteriocins, bacteriophage proteins and microbiome-oriented applications.</p><ol class="publist"><li><span class="pub-no">01</span><div class="pub-main"><p>Tymoszewska A., Aleksandrzak-Piekarczyk T. Subclass IId bacteriocins targeting mannose phosphotransferase system: Structural diversity and implications for receptor interaction and antimicrobial activity. PNAS Nexus. 2024;3(9):pgae381.</p><a href="https://doi.org/10.1093/pnasnexus/pgae381" target="_blank" rel="noopener noreferrer">doi:10.1093/pnasnexus/pgae381 <span aria-hidden="true">↗</span></a></div></li>
+<li><span class="pub-no">02</span><div class="pub-main"><p>Tymoszewska A., Steczkiewicz K., Aleksandrzak-Piekarczyk T. An atypical V-shaped garvicin C bacteriocin targets Man-PTS via domain insertion. Biophysical Journal. 2026;125(1):99–112.</p><a href="https://doi.org/10.1016/j.bpj.2025.11.010" target="_blank" rel="noopener noreferrer">doi:10.1016/j.bpj.2025.11.010 <span aria-hidden="true">↗</span></a></div></li>
+<li><span class="pub-no">03</span><div class="pub-main"><p>Santo A., Chmielewska-Jeznach M., Steczkiewicz K., Aleksandrzak-Piekarczyk T., Szczepankowska A.K. Structural and functional insights into Gp21 as a new SF4 helicase of prolate-headed Lactococcus lactis phage 94p4. International Journal of Biological Macromolecules. 2025;320(Pt 2):145668.</p><a href="https://doi.org/10.1016/j.ijbiomac.2025.145668" target="_blank" rel="noopener noreferrer">doi:10.1016/j.ijbiomac.2025.145668 <span aria-hidden="true">↗</span></a></div></li>
+<li><span class="pub-no">04</span><div class="pub-main"><p>Aleksandrzak-Piekarczyk T., Tymoszewska A., Radkiewicz M., Szczepankowska A.K., Samborowska E., Koryszewska-Bagińska A., Cukrowska B. Multi-Criterion In Vitro Profiling of Probiotic Strains for Preliminary Gut–Skin-Axis-Oriented Candidate Prioritization. Probiotics and Antimicrobial Proteins. Published online 27 October 2026.</p><a href="https://doi.org/10.1007/s12602-026-11269-3" target="_blank" rel="noopener noreferrer">doi:10.1007/s12602-026-11269-3 <span aria-hidden="true">↗</span></a></div></li>
+<li><span class="pub-no">05</span><div class="pub-main"><p>Aleksandrzak-Piekarczyk T., Szczepankowska A.K., Radkiewicz M., Samborowska E., Majsiak E., Cukrowska B. Comparative genomic and extracellular metabolomic profiling of Lactiplantibacillus plantarum LP140 and Bifidobacterium breve BB010 reveals distinct gut–brain-axis-associated metabolite profiles. BMC Microbiology. Published online 30 October 2026.</p><a href="https://doi.org/10.1186/s12866-026-05842-7" target="_blank" rel="noopener noreferrer">doi:10.1186/s12866-026-05842-7 <span aria-hidden="true">↗</span></a></div></li></ol></div></section>
+  <section id="methods"><div class="container"><p class="section-kicker">Expertise & infrastructure</p><h2>Tools for asking functional questions</h2>
+    <div class="methods-grid"><div><p>Our laboratory combines molecular microbiology, recombinant protein biochemistry, bacteriocin activity and resistance assays, functional genomics, microbial adhesion studies and phenotypic profiling.</p><p>Research infrastructure includes the <strong>Biolog OmniLog Phenotype MicroArray platform</strong>, <strong>Bioscreen C</strong> for automated growth measurements, and a <strong>CO₂ incubator</strong> for mammalian epithelial cell-line models. Selected specialized analyses, including advanced NMR, sequencing and LC–MS/MS, are performed with partners or shared facilities as appropriate.</p></div><aside class="methods-note"><strong>Collaborative and contract research</strong><p>We welcome scientifically defined collaborations involving strain characterization, Biolog Phenotype MicroArrays, growth kinetics, antimicrobial activity and functional microbial biotechnology.</p></aside></div>
+  </div></section>
+  <section id="contact" class="contact"><div class="container"><p class="section-kicker">Research & collaboration</p><h2>Let's connect</h2><p>For scientific collaborations, research partnerships or inquiries about laboratory expertise, contact the laboratory at IBB PAS, Warsaw.</p><div class="contact-links"><a href="mailto:tamara@ibb.waw.pl">tamara@ibb.waw.pl ↗</a><a href="https://ibb.edu.pl/" target="_blank" rel="noopener noreferrer">IBB PAS ↗</a><a href="https://orcid.org/0000-0002-4725-760X" target="_blank" rel="noopener noreferrer">ORCID ↗</a></div></div></section>
+</main>
+<footer><div class="container footer-inner"><span>© 2026 Laboratory of Applied Microbiology · IBB PAS, Warsaw</span><span>Independent laboratory website · <a href="https://ibb.edu.pl/" target="_blank" rel="noopener noreferrer">Institute of Biochemistry and Biophysics</a></span></div></footer>
+</body>
+</html>
